@@ -13,6 +13,8 @@ class GameTest {
         Player playerl2 = new Player(11, "Вася", 15);
         Game games = new Game();
 
+        games.register(playerl2);
+
         Assertions.assertThrows(NotRegisteredException.class, () -> {
             games.round(playerl1.getName(), playerl2.getName());
         });
@@ -23,6 +25,8 @@ class GameTest {
         Player playerl1 = new Player(10, "Андрей", 15);
         Player playerl2 = new Player(11, "Василий", 15);
         Game games = new Game();
+
+        games.register(playerl1);
 
         Assertions.assertThrows(NotRegisteredException.class, () -> {
             games.round(playerl1.getName(), playerl2.getName());
