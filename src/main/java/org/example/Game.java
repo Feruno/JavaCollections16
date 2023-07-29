@@ -1,11 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Game {
 
-    List<Player> playersReg = new ArrayList<>();
+    HashMap<String, Player> playersReg = new HashMap();
 
     /*
     public List registeredPlayer() {
@@ -18,7 +19,7 @@ public class Game {
     }*/
 
     public void register(Player player) {
-        playersReg.add(player);
+        playersReg.put(player.getName(), player);
 
     }
 
@@ -26,7 +27,7 @@ public class Game {
         Player player1 = null;
         Player player2 = null;
 
-        for (Player player : playersReg) {
+        for (Player player : playersReg.values()) {
             if (player.getName().equals(playerName1)) {
                 player1 = player;
             }
