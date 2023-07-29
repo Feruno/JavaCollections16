@@ -33,6 +33,7 @@ class GameTest {
         });
     }
 
+
     @Test
     public void shouldFirstPlayerStrengthOverSecondPlayerStrength() {
         Player playerl1 = new Player(10, "Олег", 25);
